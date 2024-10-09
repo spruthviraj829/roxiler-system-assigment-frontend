@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-// import React from 'react';
-import './Statistics.css'; // Import the CSS file
 
-// Statistics component that receives data as props
+import './Statistics.css'; 
+
+
 const Statistics = ({ statistics }) => {
   if (!statistics) {
     return <div>No statistics data available</div>;

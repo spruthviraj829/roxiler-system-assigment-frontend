@@ -17,7 +17,7 @@ h2 {
 table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid #6b7280; /* Darker gray for table border */
+  border: 1px solid #6b7280; 
   border-radius: 10px; /* Make the table rounded */
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
@@ -42,23 +42,6 @@ td {
 /* Row alternation for better readability */
 tbody tr:nth-child(even) {
   background-color: #f9fafb;
-}
-
-/* Make the first and last rows rounded */
-tbody tr:first-child td:first-child {
-  border-top-left-radius: 10px;
-}
-
-tbody tr:first-child td:last-child {
-  border-top-right-radius: 10px;
-}
-
-tbody tr:last-child td:first-child {
-  border-bottom-left-radius: 10px;
-}
-
-tbody tr:last-child td:last-child {
-  border-bottom-right-radius: 10px;
 }
 
 /* Pagination styles */
@@ -86,13 +69,12 @@ tbody tr:last-child td:last-child {
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth hover transition */
 }
 
-/* Hover effect for buttons */
-.pagination button:hover:not(:disabled) {
+/* Hover and Disabled styles */
+.pagination button:hover:not(:disabled),
+.pagination button:disabled:hover {
   background-color: #2563eb; /* Lighter blue on hover */
-  transform: scale(1.05); /* Slight enlargement on hover */
 }
 
-/* Disabled button styles */
 .pagination button:disabled {
   opacity: 0.5; /* Faded appearance for disabled buttons */
   cursor: not-allowed; /* Change cursor to indicate disabled */

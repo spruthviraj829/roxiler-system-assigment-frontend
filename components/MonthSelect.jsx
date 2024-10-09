@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-/* MonthSelect.js */
-// import React from 'react';
-import './MonthSelector.css'; // Import the CSS file
+
+
+import './MonthSelector.css'; 
 
 const MonthSelector = ({ setSelectedMonth, selectedMonth }) => {
   const handleMonthChange = (event) => {
@@ -17,7 +17,7 @@ const MonthSelector = ({ setSelectedMonth, selectedMonth }) => {
         value={selectedMonth}
         onChange={handleMonthChange}
       >
-        {/* Generate month options */}
+        {}
         {[...Array(12)].map((_, index) => (
           <option key={index} value={index + 1}>
             {new Date(0, index).toLocaleString('default', { month: 'long' })}

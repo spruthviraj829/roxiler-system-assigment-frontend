@@ -28,7 +28,7 @@ const getAllData = async()=>{
   }
   useEffect(()=>{
        getAllData();
-        // fetchBarChartData() ;
+        
   }, [month])
  
  

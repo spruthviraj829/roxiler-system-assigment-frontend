@@ -2,7 +2,7 @@
 const URL = "https://roxiler-system-assignment-backend.onrender.com";
 export const fetchBarChartData = async(month)=>{
     try {
-      const response = await fetch(`${URL}/api/v1/bar-chart/${month}`); // Replace with your API endpoint   
+      const response = await fetch(`${URL}/api/v1/bar-chart/${month}`); 
       const data =await response.json();
       return data ;
     } catch (error) {

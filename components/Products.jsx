@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import './ProductTable.css'; // Import the CSS file
+import './ProductTable.css'; 
 
-// Utility function to truncate description
 const truncateDescription = (description, maxWords) => {
   const words = description.split(' ');
   if (words.length <= maxWords) {
-    return description; // Return original description if within limit
+    return description; 
   }
-  return words.slice(0, maxWords).join(' ') + '...'; // Truncate and add ellipsis
+  return words.slice(0, maxWords).join(' ') + '...'; 
 };
 
 const ProductTable = ({ products }) => {
@@ -18,12 +17,12 @@ const ProductTable = ({ products }) => {
 
   const totalPages = Math.ceil(products.length / productsPerPage);
 
-  // Function to toggle the expanded description
+ 
   const toggleDescription = (productId) => {
     setExpandedProductId((prevId) => (prevId === productId ? null : productId));
   };
 
-  // Pagination logic
+
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
@@ -66,8 +65,8 @@ const ProductTable = ({ products }) => {
               </td>
               <td>
                 {expandedProductId === product.id
-                  ? product.description // Show full description if expanded
-                  : truncateDescription(product.description, 15) // Truncate if not expanded
+                  ? product.description 
+                  : truncateDescription(product.description, 15) 
                 }
                 {product.description.split(' ').length > 15 && (
                   <span
@@ -87,7 +86,7 @@ const ProductTable = ({ products }) => {
         </tbody>
       </table>
 
-      {/* Pagination controls */}
+      {}
       <div className="pagination">
         <button
           onClick={goToPreviousPage}
