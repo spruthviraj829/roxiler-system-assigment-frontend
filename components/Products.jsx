@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import './ProductTable.css'; // Import the CSS file
 
 // Utility function to truncate description
 const truncateDescription = (description, maxWords) => {
@@ -36,34 +37,34 @@ const ProductTable = ({ products }) => {
   };
 
   return (
-    <div style={{ padding: '20px' }} className="w-full">
-      <h2 className="text-2xl mb-4">Product Details</h2>
-      <table className="w-full border border-collapse border-gray-300">
+    <div className="container">
+      <h2>Product Details</h2>
+      <table>
         <thead>
           <tr>
-            <th className="border border-gray-300 p-2">ID</th>
-            <th className="border border-gray-300 p-2">Category</th>
-            <th className="border border-gray-300 p-2">Image</th>
-            <th className="border border-gray-300 p-2">Date of Sale</th>
-            <th className="border border-gray-300 p-2">Description</th>
-            <th className="border border-gray-300 p-2">Month of Sale</th>
-            <th className="border border-gray-300 p-2">Price</th>
-            <th className="border border-gray-300 p-2">Sold</th>
-            <th className="border border-gray-300 p-2">Title</th>
+            <th>ID</th>
+            <th>Category</th>
+            <th>Image</th>
+            <th>Date of Sale</th>
+            <th>Description</th>
+            <th>Month of Sale</th>
+            <th>Price</th>
+            <th>Sold</th>
+            <th>Title</th>
           </tr>
         </thead>
         <tbody>
           {currentProducts.map((product) => (
             <tr key={product.id}>
-              <td className="border border-gray-300 p-2">{product.id}</td>
-              <td className="border border-gray-300 p-2">{product.category}</td>
-              <td className="border border-gray-300 p-2">
-                <img src={product.image} alt={product.title} className="w-12 h-auto" />
+              <td>{product.id}</td>
+              <td>{product.category}</td>
+              <td>
+                <img src={product.image} alt={product.title} style={{ width: '50px', height: 'auto' }} />
               </td>
-              <td className="border border-gray-300 p-2">
+              <td>
                 {new Date(product.dateOfSale).toLocaleDateString()}
               </td>
-              <td className="border border-gray-300 p-2">
+              <td>
                 {expandedProductId === product.id
                   ? product.description // Show full description if expanded
                   : truncateDescription(product.description, 15) // Truncate if not expanded
@@ -71,37 +72,35 @@ const ProductTable = ({ products }) => {
                 {product.description.split(' ').length > 15 && (
                   <span
                     onClick={() => toggleDescription(product.id)}
-                    className="text-blue-500 cursor-pointer ml-2"
+                    style={{ color: 'blue', cursor: 'pointer', marginLeft: '8px' }}
                   >
                     {expandedProductId === product.id ? 'Click Less' : 'Click More'}
                   </span>
                 )}
               </td>
-              <td className="border border-gray-300 p-2">{product.monthOfSale}</td>
-              <td className="border border-gray-300 p-2">${product.price.toFixed(2)}</td>
-              <td className="border border-gray-300 p-2">{product.sold ? 'Yes' : 'No'}</td>
-              <td className="border border-gray-300 p-2">{product.title}</td>
+              <td>{product.monthOfSale}</td>
+              <td>${product.price.toFixed(2)}</td>
+              <td>{product.sold ? 'Yes' : 'No'}</td>
+              <td>{product.title}</td>
             </tr>
           ))}
         </tbody>
       </table>
 
       {/* Pagination controls */}
-      <div className="flex justify-between items-center mt-4 bg-gray-200 p-4 rounded-md shadow-md">
+      <div className="pagination">
         <button
           onClick={goToPreviousPage}
           disabled={currentPage === 1}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 shadow-sm disabled:opacity-50 transition duration-200 ease-in-out"
         >
           Previous
         </button>
-        <span className="font-semibold">
+        <span>
           Page {currentPage} of {totalPages}
         </span>
         <button
           onClick={goToNextPage}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-700 shadow-sm disabled:opacity-50 transition duration-200 ease-in-out"
         >
           Next
         </button>

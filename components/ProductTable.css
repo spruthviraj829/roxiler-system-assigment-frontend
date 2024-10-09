@@ -1,0 +1,105 @@
+/* ProductTable.css */
+
+/* Container styles */
+.container {
+  padding: 20px;
+  width: 100%;
+}
+
+/* Heading styles */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4a90e2; /* Color for heading */
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #6b7280; /* Darker gray for table border */
+  border-radius: 10px; /* Make the table rounded */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Header (th) styles */
+th {
+  background-color: #4a90e2; /* Blue background for table headers */
+  color: white; /* White text color for table headers */
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #6b7280; /* Darker gray for header border */
+}
+
+/* Cell (td) styles */
+td {
+  border: 1px solid #6b7280; /* Darker gray for cell border */
+  padding: 0.5rem;
+  text-align: left;
+}
+
+/* Row alternation for better readability */
+tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Make the first and last rows rounded */
+tbody tr:first-child td:first-child {
+  border-top-left-radius: 10px;
+}
+
+tbody tr:first-child td:last-child {
+  border-top-right-radius: 10px;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: #e5e7eb; /* Light gray background */
+  padding: 1rem; /* Add padding */
+  border-radius: 0.375rem; /* Rounded corners */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Button styles in pagination */
+.pagination button {
+  padding: 0.75rem 1.5rem; /* Larger padding for button size */
+  background-color: #1d4ed8; /* Dark blue background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 20px; /* More rounded corners */
+  cursor: pointer;
+  font-size: 1rem; /* Font size */
+  font-weight: 600; /* Bold text */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+/* Hover effect for buttons */
+.pagination button:hover:not(:disabled) {
+  background-color: #2563eb; /* Lighter blue on hover */
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Disabled button styles */
+.pagination button:disabled {
+  opacity: 0.5; /* Faded appearance for disabled buttons */
+  cursor: not-allowed; /* Change cursor to indicate disabled */
+}
+
+/* Page info text styles */
+.pagination span {
+  font-weight: bold;
+  font-size: 1.1rem;
+}

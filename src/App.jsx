@@ -34,23 +34,23 @@ const getAllData = async()=>{
  
   return (
     <div className='w-full'>
-       <div className='fixed top-0 bg-white w-full h-10 text-center font-bold text-2xl'>Sales Statictic</div>
-      <div className='fixed bg-blue-500 h-12  rounded-lg w-full mb-10 top-8 text-center'>
+       <div className='fixed top-0 bg-white w-full h-10 text-center font-bold text-3xl'>Sales Statictic</div>
+      <div className='fixed h-12  rounded-lg w-full mb-10 top-7 text-center'>
           <MonthSelector setSelectedMonth={setMonth} selectedMonth={month}  />
       </div>
-     
+       
        <div className=' flex w-full mt-24'>
-           <div className='w-[60%]'>
+           <div className='w-[70%]'>
               <ProductTable products={monthData}/>
            </div>
           
           <div className='w-[50%] mb-24  mt-10 flex flex-col'>
 
-            <div className='flex gap-12 justify-between border-4  mx-2 p-2 mb-2'>
+            <div className='flex gap-12 justify-between   mx-2 p-2 mb-2'>
              <Statistics statistics={statictics}/>
             <PieChart  monthData ={pieData}/>
             </div>
-             <div className='border-4  mx-2 p-2'>
+             <div className='  mx-2 p-2'>
             <BarChart  chartData= {chartData} /> 
              </div>
           </div>

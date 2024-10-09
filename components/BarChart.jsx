@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Bar } from 'react-chartjs-2';
+import './BarChart.css'; // Import the CSS file
+
 import { 
   Chart as ChartJS, 
   CategoryScale, 
@@ -21,7 +23,6 @@ ChartJS.register(
 );
 
 // BarChart component
-// eslint-disable-next-line react/prop-types
 const BarChart = ({ chartData }) => {
  
   if (!Array.isArray(chartData) || chartData.length === 0) {
@@ -62,7 +63,7 @@ const BarChart = ({ chartData }) => {
   };
 
   return (
-    <div className="w-full h-96 p-4 bg-white rounded-lg shadow-lg">
+    <div className="barchart-container">
       <Bar data={data} options={options} />
     </div>
   );

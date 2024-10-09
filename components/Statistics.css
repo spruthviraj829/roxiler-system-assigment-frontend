@@ -1,0 +1,32 @@
+/* Statistics.css */
+
+/* Container styles */
+.statistics-container {
+    padding: 20px; /* Add padding */
+    background-color: #f9fafb; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the component horizontally */
+    max-width: 500px; /* Slightly decreased width of the container */
+    width: 90%; /* Set to 90% of the parent width */
+}
+
+/* Heading styles */
+.statistics-container h2 {
+    font-weight: bold; /* Bold heading */
+    font-size: 1.5rem; /* Larger font size for the heading */
+    margin-bottom: 1rem; /* Spacing below the heading */
+    color: #1d4ed8; /* Dark blue color for the heading */
+    text-align: center; /* Center the heading */
+}
+
+/* Content styles */
+.statistics-content {
+    text-align: left; /* Align the content to the left */
+}
+
+.statistics-content p {
+    font-size: 1rem; /* Standard font size for paragraphs */
+    color: #333; /* Dark gray text color */
+    margin-bottom: 0.5rem; /* Spacing between paragraphs */
+}

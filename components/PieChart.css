@@ -1,0 +1,31 @@
+/* PieChart.css */
+
+/* Container styles */
+.piechart-container {
+    width: 90%; /* Adjusted to 90% for smaller size */
+    max-width: 400px; /* Set a maximum width for the container */
+    height: auto; /* Automatic height */
+    padding: 10px; /* Decreased padding around the chart */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the container */
+    text-align: center; /* Center the text inside the container */
+  }
+  
+  /* Heading styles */
+  .piechart-heading {
+    font-weight: bold; /* Bold heading */
+    color: #1d4ed8; /* Dark blue color for the heading */
+    margin-bottom: 1rem; /* Spacing below the heading */
+  }
+  
+  /* Pie chart size */
+  .piechart {
+    width: 250px; /* Width of the pie chart */
+    height: 250px; /* Height of the pie chart */
+    margin: 0 auto; /* Center the pie chart */
+  }
+  
+  /* Add additional styles for responsiveness if necessary */
+  

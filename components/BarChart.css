@@ -1,0 +1,23 @@
+/* BarChart.css */
+
+/* Container styles */
+.barchart-container {
+    width: 100%; /* Full width */
+    height: 400px; /* Height of the chart */
+    padding: 20px; /* Padding around the chart */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 20px auto; /* Center the container */
+  }
+  
+  /* Heading styles for the chart title */
+  .barchart-container h2 {
+    text-align: center; /* Center the heading */
+    font-weight: bold; /* Bold heading */
+    color: #1d4ed8; /* Dark blue color for the heading */
+    margin-bottom: 1rem; /* Spacing below the heading */
+  }
+  
+  /* Add additional styles for responsiveness if necessary */
+  

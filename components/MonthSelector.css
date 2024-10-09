@@ -1,0 +1,40 @@
+/* MonthSelector.css */
+
+/* Container styles */
+.month-selector-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 10px 0; /* Margin around the container */
+    background-color: #f3f4f6; /* Light gray background for the container */
+    padding: 10px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Select input styles */
+.month-selector {
+    padding: 10px; /* Padding inside the select */
+    font-size: 1rem; /* Font size for the text */
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: border-color 0.2s; /* Smooth transition for border color */
+    margin-left: 10px; /* Space between label and select */
+}
+
+/* Hover and focus styles for select */
+.month-selector:hover,
+.month-selector:focus {
+    border-color: #1d4ed8; /* Change border color on hover/focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Label styles */
+.month-selector-label {
+    font-weight: bold; /* Bold label text */
+    margin-right: 10px; /* Space between label and select */
+    color: #1d4ed8; /* Dark blue color for the label */
+}

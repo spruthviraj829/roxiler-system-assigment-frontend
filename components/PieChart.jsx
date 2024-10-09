@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-// import React from 'react';
 import { Pie } from 'react-chartjs-2';
+import './PieChart.css'; // Import the CSS file
+
 import {
   Chart as ChartJS,
   ArcElement,
@@ -33,10 +34,10 @@ const PieChart = ({ monthData }) => {
   };
 
   return (
-    <div>
-      <h2>Pie Chart: Items by Category</h2>
+    <div className="piechart-container">
+      <h2 className="piechart-heading">Pie Chart: Items by Category</h2>
       {monthData.length > 0 ? (
-        <div style={{ width: '300px', height: '300px' }}> {/* Adjust the size here */}
+        <div className="piechart">
           <Pie data={chartData} />
         </div>
       ) : (
